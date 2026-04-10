@@ -1,7 +1,6 @@
 import useTheme from "@/hooks/useTheme";
 import { Ionicons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
-import React from "react";
 
 const TabsLayout = () => {
   const { colors } = useTheme();
@@ -9,11 +8,11 @@ const TabsLayout = () => {
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: colors.primary,
-        tabBarInactiveTintColor: "grey",
+        tabBarInactiveTintColor: colors.textMuted,
         tabBarStyle: {
-          backgroundColor: "white",
+          backgroundColor: colors.surface,
           borderTopWidth: 1,
-          borderTopColor: "grey",
+          borderTopColor: colors.border,
           height: 90,
           paddingBottom: 30,
           paddingTop: 10,
