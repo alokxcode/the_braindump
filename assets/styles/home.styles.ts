@@ -119,27 +119,27 @@ export const CreateHomeStyles = (colors: ColorScheme) => {
     },
     todoListContent: {
       paddingHorizontal: 24,
-      paddingBottom: 100,
+      paddingBottom: 16,
     },
     emptyListContainer: {
       flexGrow: 1,
       justifyContent: "center",
     },
     todoItemWrapper: {
-      marginVertical: 12,
+      marginVertical: 10,
     },
     todoItem: {
       flexDirection: "row",
       alignItems: "flex-start",
       padding: 20,
       borderRadius: 20,
-      shadowColor: "#000",
+      shadowColor: colors.shadow,
       shadowOffset: {
         width: 0,
-        height: 4,
+        height: 8,
       },
-      shadowOpacity: 0.1,
-      shadowRadius: 8,
+      shadowOpacity: 0.14,
+      shadowRadius: 16,
       elevation: 8,
     },
     checkbox: {
@@ -161,8 +161,26 @@ export const CreateHomeStyles = (colors: ColorScheme) => {
       fontSize: 17,
       lineHeight: 24,
       fontWeight: "500",
-      marginBottom: 16,
+      marginBottom: 10,
       color: colors.text,
+    },
+    thoughtMetaRow: {
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "space-between",
+      gap: 8,
+    },
+    thoughtTime: {
+      fontSize: 12,
+      fontWeight: "600",
+      color: colors.textMuted,
+    },
+    thoughtState: {
+      fontSize: 12,
+      fontWeight: "700",
+      color: colors.primary,
+      textTransform: "uppercase",
+      letterSpacing: 0.5,
     },
     todoActions: {
       flexDirection: "row",

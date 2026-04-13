@@ -1,5 +1,6 @@
 import useTheme from "@/hooks/useTheme";
 import { Ionicons } from "@expo/vector-icons";
+import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import { Tabs } from "expo-router";
 
 const TabsLayout = () => {
@@ -29,7 +30,11 @@ const TabsLayout = () => {
         options={{
           title: "Thoughts",
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="flash-outline" size={size} color={color} />
+            <MaterialCommunityIcons
+              name="thought-bubble"
+              size={24}
+              color={colors.primary}
+            />
           ),
         }}
       />
