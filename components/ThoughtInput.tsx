@@ -1,5 +1,4 @@
 import { CreateThoughtInputStyles } from "@/assets/styles/thoughtInput.styles";
-import { playThoughtSound } from "@/utils/playThoughtSound";
 import useTheme from "@/hooks/useTheme";
 import { Ionicons } from "@expo/vector-icons";
 import { useState } from "react";
@@ -30,9 +29,11 @@ const ThoughtInput = ({ onAddThought }: ThoughtInputProps) => {
     setIsSubmitting(true);
 
     try {
-      await onAddThought(trimmedThought);
-      playThoughtSound();
-      setThought("");
+      const result = await onAddThought(trimmedThought);
+      if (result !== null) {
+        setThought("");
+      }
+      // If result is null, the error alert is already shown by useLocalStorage
     } catch {
       setErrorMessage("Could not save thought. Please try again.");
     } finally {
